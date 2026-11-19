@@ -1,3 +1,16 @@
+# WETH-only deployment scripts
+
+Only the WETH branch is retained in the deployment and setup scripts.
+The USDaf deployment script and non-WETH branch configuration have been removed.
+
+These are still upstream BOLD deployment addresses, NOT Florin deployment
+configuration. Do not broadcast these scripts as a Florin deployment. FUSD
+addresses, administrative roles and pause propagation remain a separate step.
+The generic strategy/factory contracts are not restricted to WETH by this cleanup.
+Historical broadcast artifacts are retained unchanged as provenance.
+
+## Upstream WETH deployment reference
+
 ** yBOLD **
 
 Factories/Periphery:
@@ -18,46 +31,9 @@ Factories/Periphery:
 yBOLD:
 - yBOLD: 0x9F4330700a36B29952869fac9b33f45EEdd8A3d8
 - WETH Strategy:  0x2048A730f564246411415f719198d6f7c10A7961
-- wstETH Strategy:  0x46af61661B1e15DA5bFE40756495b7881F426214
-- rETH Strategy:  0x2351E217269A4a53a392bffE8195Efa1c502A1D2
 
 WITH AUCTION 1.0.4:
 - WETH Strategy:  0xc5e7D3F76a03006540f17668A0267C668FFb5b75
-- wstETH Strategy:  0x3589b93CaDb464b6E1974Cc9fc0c9be698Ee49a5
-- rETH Strategy:  0x6ED566B76838A08d04cBd6323231B08a2eC69005
 
 st-yBOLD:
 - 0x23346B04a7f55b8760E5860AA5A77383D63491cD
-
-** sUSDaf **
-
-OLD:
-- scrvUSD Strategy:  0xdB265804C3d7819918744F713B82c57A25Dc827E
-- sDAI Strategy:  0xF7cCa584454ee2f103A6A8d6d7DFcd5Db018dEE4
-- sUSDS Strategy:  0xEcf4dCBb6Aba1925a77038914E406037011B676F
-- sfrxUSD Strategy:  0x32029d42311Ae0A7e00F9700C50e569b94fdfcd7
-- sUSDe Strategy:  0x40F680d259283d1493f14a062c6A59621Bbce285
-- tBTC Strategy:  0x4308b3e0B787A367Ba31aA35B29310Cfd7745B9a
-- WBTC18 Strategy:  0x268350b21732D47F6b1e4A45Cc67F30820175c9a
-- cbBTC18 Strategy:  0xE6d0f1C9cB9d4bA55F7eE3C38E34E7a488864F6c
-- sUSDaf deployed:  0x0aBd93dA8387B5Ef0511a2859d85D84fe4519e94
-- aprOracle: 0x133bfE2b4c75DAB75AE23a51F129dCb74820F77C
-- aprOracle (new, sp yield fix): 0xdDFB32C743b8b832915DF09E4caf16495DF4Fbb0
-
-NEW:
-- ysyBOLD Strategy:  0xad7D5D31Ffcb96f6F719Bb78209019d3d09e6baa
-- scrvUSD Strategy:  0x0F2948d1C728c3DE28badaa0cF80EAf144B07FdE
-- sUSDS Strategy:  0xF6516d45A1625a6d9d3479902a5CB4c8B79F1887
-- sfrxUSD Strategy:  0x388095a341Bf5767d3d3B7093cd89A82B816B507
-- tBTC Strategy:  0xb00a77045574f42b9Aff25dB275af4d5d25146bb
-- WBTC18 Strategy:  0x1d53B127629AF8df7da5488833a50c2F12692F5C
-- sUSDaf deployed:  0x89E93172AEF8261Db8437b90c3dCb61545a05317
-- aprOracle: 0xE9015AE7B6cf7D972EBd10FFc09ed26034F85786
-
-WITH AUCTION 1.0.4:
-- ysyBOLD Strategy:  0xb4cA3c9831b9f87b69f6c41D9619f09AcCb43428
-- scrvUSD Strategy:  0x99E1160E89c6C7fA4951531358d48728E7A29206
-- sUSDS Strategy:  0xcC5559a5d13d99b468B9C0E058e1327cf9014855
-- sfrxUSD Strategy:  0x1302f89b45781f0d333abc55262B668b44bE8fa8
-- tBTC Strategy:  0x024e6412903977EC11AD910E6148435A532f89c1
-- WBTC18 Strategy:  0x1fb3F503d51480c25c1F2D64B6F4018D4c2805f7

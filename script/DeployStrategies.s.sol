@@ -28,16 +28,6 @@ contract DeployStrategies is Script {
             STRATEGY_FACTORY.newStrategy(_wethAddressesRegistry, ASSET, "Liquity V2 WETH Stability Pool");
         strategies.push(_wethStrategy);
 
-        address _wstethAddressesRegistry = address(0x8d733F7ea7c23Cbea7C613B6eBd845d46d3aAc54); // wstETH Address Registry
-        address _wstethStrategy =
-            STRATEGY_FACTORY.newStrategy(_wstethAddressesRegistry, ASSET, "Liquity V2 wstETH Stability Pool");
-        strategies.push(_wstethStrategy);
-
-        address _rethAddressesRegistry = address(0x6106046F031a22713697e04C08B330dDaf3e8789); // rETH Address Registry
-        address _rethStrategy =
-            STRATEGY_FACTORY.newStrategy(_rethAddressesRegistry, ASSET, "Liquity V2 rETH Stability Pool");
-        strategies.push(_rethStrategy);
-
         for (uint256 i = 0; i < strategies.length; i++) {
             IStrategyInterface strategy = IStrategyInterface(strategies[i]);
             strategy.acceptManagement();
@@ -52,8 +42,6 @@ contract DeployStrategies is Script {
 
         console.log("-----------------------------");
         console.log("WETH Strategy deployed at: ", _wethStrategy);
-        console.log("wstETH Strategy deployed at: ", _wstethStrategy);
-        console.log("rETH Strategy deployed at: ", _rethStrategy);
         console.log("-----------------------------");
     }
 

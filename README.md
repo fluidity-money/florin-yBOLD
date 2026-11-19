@@ -17,9 +17,9 @@ NOTE: If you are on a windows machine it is recommended to use [WSL](https://lea
 ### Clone this repository
 
 ```sh
-git clone --recursive https://github.com/yearn/tokenized-strategy-foundry-mix
+git clone --recursive https://github.com/fluidity-money/florin-yBOLD
 
-cd tokenized-strategy-foundry-mix
+cd florin-yBOLD
 
 yarn
 ```

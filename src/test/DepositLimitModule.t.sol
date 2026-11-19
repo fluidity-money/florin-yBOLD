@@ -16,7 +16,7 @@ contract DepositLimitModuleTest is Setup {
     uint256 public constant DEPOSIT_LIMIT_MANAGER_ROLE = 256;
 
     IVault public vault = IVault(0x9F4330700a36B29952869fac9b33f45EEdd8A3d8); // yBOLD
-    IStrategyInterface public _strategy = IStrategyInterface(0x46af61661B1e15DA5bFE40756495b7881F426214); // wstETH SP Strategy
+	IStrategyInterface public _strategy = IStrategyInterface(0x2048A730f564246411415f719198d6f7c10A7961); // WETH SP Strategy
 
     function setUp() public override {
         uint256 _blockNumber = 231_356_20; // Caching for faster tests

@@ -15,13 +15,9 @@ contract DeployAprOracle is Script {
     function run() external {
         vm.startBroadcast(vm.envUint("DEPLOYER_PRIVATE_KEY"));
 
-        // BOLD
-        // address _multiTroveGetter = address(0xFA61dB085510C64B83056Db3A7Acf3b6f631D235);
-        // address _collateralRegistry = address(0xf949982B91C8c61e952B3bA942cbbfaef5386684);
-
-        // USDaf
-        address _multiTroveGetter = address(0xb3683A407bddDDFB126Cf06Fb52d974a08fD7E80);
-        address _collateralRegistry = address(0x33D68055Cd54061991B2e98b9ab326fFCE4d60Fe);
+		// BOLD deployment used by the WETH strategy.
+		address _multiTroveGetter = address(0xFA61dB085510C64B83056Db3A7Acf3b6f631D235);
+		address _collateralRegistry = address(0xf949982B91C8c61e952B3bA942cbbfaef5386684);
 
         StrategyAprOracle _oracle = new StrategyAprOracle(MANAGEMENT, _multiTroveGetter, _collateralRegistry);
 
